@@ -1,0 +1,169 @@
+@import '../../../../scss/positions';
+@import '../../../../scss/palette';
+.app {
+  height: 100vh;
+  width: 100vw;
+  font-size: 10px;
+  position: relative;
+
+  &__header {
+    font-size: 20px;
+  }
+
+  &__preview {
+    &-container {
+      height: calc(38.5vh + 50px);
+      overflow: auto;
+      margin-top: 1.5vh;
+    }
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
+    &-arrow {
+      &-container {
+        height: calc(24px + 0.5vh);
+        padding-top: 0.5vh;
+      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+    }
+  }
+
+  &__dropzone {
+    width: 100%;
+    height: 30vh;
+    border: 3px solid $white1;
+    border-radius: 5px;
+    color: $white1;
+    margin-top: 1vh;
+    cursor: pointer;
+    font-size: 1.2em;
+    @extend %flex-center;
+  }
+
+  &__upload {
+    display: flex;
+    flex-direction: row-reverse;
+    overflow-y: scroll;
+    &-button {
+      cursor: pointer;
+      font-size: 1.4em;
+      border-radius: 0.5vh;
+      padding: 1vh 1vw;
+      border: 2px solid white;
+      transition: 0.2s all ease-in-out;
+      &:hover {
+        background-color: white;
+        color: $leftBackgroundColor;
+      }
+    }
+  }
+
+  &__left-side {
+    position: fixed;
+    width: 35%;
+    height: 100%;
+    background-color: $white1;
+    background-color: $leftBackgroundColor;
+
+    box-shadow: -2px 0px 10px black;
+    color: white;
+    padding: 4vh 3vw;
+    flex-direction: column;
+  }
+
+  &__right-side {
+    position: static;
+    // overflow: visible;
+    width: 65%;
+    margin-left: 35%;
+    height: 100%;
+    background-color: $rightBackgroundColor;
+    // background-image: linear-gradient(135deg, #11173a, #1b2350);
+    color: $white1;
+    padding: 4vh 3vw;
+    overflow-y: scroll;
+  }
+
+  &__warning {
+    margin-top: 1vh;
+    width: 100%;
+    color: black;
+    padding: 1vh 1vw;
+    background-color: white;
+
+    & > span {
+      font-size: 20px;
+    }
+  }
+}
+
+.modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.33);
+  color: black;
+  @extend %flex-center;
+
+  &__content {
+    width: 40vw;
+    // height: 40vh;
+    background-color: rgb(233, 233, 233);
+    padding: 4vh 2vw;
+  }
+
+  &__header {
+    color: red;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  &__description {
+    font-size: 16px;
+    margin-top: 0.5vh;
+  }
+
+  &__choices {
+    // background-color: red;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    & > div {
+    }
+  }
+}
+
+.choice {
+  @extend %flex-center;
+  height: 5vh;
+  color: white;
+}
+
+.choice-left {
+  background-color: black;
+
+  &:hover {
+    background-color: lighten(black, 10%);
+  }
+}
+
+.choice-right {
+  background-color: rgb(37, 76, 248);
+
+  &:hover {
+    background-color: lighten(rgb(37, 76, 248), 10%);
+  }
+}
+
+.warning {
+  font-size: 20px;
+  color: red;
+}

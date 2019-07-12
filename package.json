@@ -1,0 +1,65 @@
+{
+  "name": "somename",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.19.0",
+    "carbon-components": "^10.3.2",
+    "carbon-components-react": "^7.3.2",
+    "concurrently": "^4.1.1",
+    "express": "^4.17.1",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.1",
+    "npm-run-all": "^4.1.5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-dropzone": "^10.1.5",
+    "react-icons": "^3.7.0",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.4",
+    "redux-define": "^1.1.1",
+    "redux-saga": "^1.0.5",
+    "saga": "^4.0.0-alpha"
+  },
+  "scripts": {
+    "build-client": "react-scripts build",
+    "test-client": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:client": "react-scripts start",
+    "dev:build-server": "webpack --config webpack.server.js --watch",
+    "dev:server": "nodemon --watch server-build --exec \"node server-build/bundle.js\""
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.13.0",
+    "prettier": "^1.17.1",
+    "webpack-cli": "^3.3.2",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "proxy": "http://localhost:3001"
+}
