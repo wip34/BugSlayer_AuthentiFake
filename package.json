@@ -8,7 +8,7 @@
     "carbon-components-react": "^7.3.2",
     "concurrently": "^4.1.1",
     "express": "^4.17.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.19.1",
     "npm-run-all": "^4.1.5",
     "react": "^16.8.6",
